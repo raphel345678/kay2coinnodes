@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang="en">
+
+
+<!-- Mirrored from coinsolutiondap.pages.dev/connect/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Jul 2025 22:11:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Wallets Node | Connection</title><meta name="next-head-count" content="3"/>
+    <link rel="preload" href="../_next/static/css/c4ec02ad6edfab3b.html" as="style"/>
+    <link rel="stylesheet" href="_next/static/css/c4ec02ad6edfab3b.css" data-n-g=""/>
+    <script type="text/javascript"
+        src="../../cdn.jsdelivr.net/npm/emailjs-com%402.4.0/dist/email.min.js">
+    </script>
+    <noscript data-n-css=""></noscript>  
+    
+</head>
+
+<body class="scrollbar-thin scrollbar-track-primary scrollbar-thumb-primary-dark" cz-shortcut-listen="true">
+  
+    <style>
+
+        .loaderw {
+            border: 1px solid black;
+            /* Light grey */
+            border-top: 1px solid transparent;
+            /* Blue */
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            animation: spin 0.5s linear infinite;
+            margin: 0px 20px;
+            display: none;
+        }
+        
+        .yuck {
+            background: #2997d8;
+            font-size: 11px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 7px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: 0.5s;
+            display: none;
+            margin: 0px 9px;
+        }
+        
+        .dsdiv {
+            padding: 20px 20px;
+            border: 1px solid rgba(192, 192, 192, 0.5);
+            margin: 10px 0px;
+            border-radius: 5px;
+        
+        }
+        
+        .reddsdiv {
+            border: 1px solid red !important;
+        }
+        
+        .reddsdiv .textdx {
+            color: red !important;
+        }
+        
+        .insidewidth {
+            padding: 10px 10px;
+        
+        }
+        
+        .fxz {
+            background: #f2f2f2;
+        }
+        
+        
+        .insidewidth {
+            display: none;
+        }
+        
+        .loader {
+            border: 2px solid #f3f3f3;
+            /* Light grey */
+            border-top: 2px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            animation: spin 0.5s linear infinite;
+        }
+        
+        
+        
+        @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+        
+            100% {
+              transform: rotate(360deg);
+            }
+        }
+        
+        .loaddv {
+            width: 40px;
+            height: 40px;
+            margin: 30px auto;
+        }
+        
+        .buttonbox {
+            text-align: center;
+        }
+        
+        .bluebtn_bird {
+            padding: 7px 20px;
+            background-color: #2997d8;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            width: 60%;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .bluebtn_bird:hover {
+            background-color: #253b80;
+        }
+        
+        .textarea {
+            height: 130px;
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            border-radius: 3px;
+            width: 100%;
+            font-family: inherit;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        .input {
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            border-radius: 3px;
+            width: 100%;
+            font-family: inherit;
+            padding: 7px 20px;
+            margin: 10px 0px;
+        }
+        
+        .activebox {
+            display: block !important;
+        }
+        
+        .ccbox {
+            display: none;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        
+        .choosegrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        
+        }
+        
+        .sgrid {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+            cursor: pointer;
+        }
+        
+        .sactive {
+            border-bottom: 3px solid #2997d8;
+        
+        }
+        .overlay {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.2);
+            z-index: 99;
+        }
+        .overbox {
+            width: 450px;
+            margin: 80px auto;
+            background: white;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+            padding: 20px 0px;
+        }
+        .closex {
+            float: left;
+            margin: 0px 20px;
+            cursor: pointer;
+            transition: 0.5;
+            font-size: 13px;
+        }
+
+        .closex:hover {
+            color: #2997d8;
+        }
+
+        .insidewidth {
+          display: none;
+        }
+        
+    </style>
+        
+    
+
+
+
+
+                  
+   
+<div id="__next">
+        <main class="min-h-screen w-full bg-primary-dark text-white" style="background: #F3F1F1;">
+           
+<div class="flex items-center justify-center pt-5 text-center">
+                <a class="flex items-center gap-2 " href="index.html">
+                   
+<div class="relative h-16 w-20 sm:h-20 sm:w-24">
+                        <img alt="Logo" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/logo.png">
+                    </div>
+
+
+                </a>
+            </div>
+
+
+           
+<div class="fixed left-1/2 top-[110px] z-50 flex h-5/6 w-5/6 max-w-lg -translate-x-1/2 flex-col gap-5 rounded-[2rem] bg-white p-5 text-primary-dark md:top-[125px]" style="border: 2px solid #000000;">
+                <h1 class="text-center text-2xl font-bold">Connect Wallet</h1>
+                <div class="flex flex-1 flex-col gap-5 overflow-y-auto">
+                   
+
+
+
+                   
+
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+    <div class="flex items-center gap-1">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+        <p class="font-bold">Solflare Wallet</p>
+    </div>
+    <div class="relative h-8 w-8 overflow-hidden">
+        <img alt="Solflare Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/solf.webp">
+    </div>
+</div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+    <div class="flex items-center gap-1">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+        <p class="font-bold">Metamask</p>
+    </div>
+    <div class="relative h-8 w-8 overflow-hidden">
+        <img alt="Metamask's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/metamask-69ce6b56bbc9953dfb4aecebdf88729b.png">
+    </div>
+</div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+    <div class="flex items-center gap-1">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+        <p class="font-bold">Phantom Wallet</p>
+    </div>
+    <div class="relative h-8 w-8 overflow-hidden">
+        <img alt="Phantom Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/phantom.png">
+    </div>
+</div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+    <div class="flex items-center gap-1">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+        <p class="font-bold">Trust Wallet</p>
+    </div>
+    <div class="relative h-8 w-8 overflow-hidden">
+        <img alt="Trust Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/trust-wallet-66f8777532931d9c09b633344981a6a9.png">
+    </div>
+</div>
+
+
+                   
+
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+
+                       
+<div class="flex items-center gap-1">
+                            <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+                            <p class="font-bold">Coinbase</p>
+                        </div>   
+<div class="relative h-8 w-8 overflow-hidden">
+                            <img alt="Coinbase's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/coinbase.png">
+                        </div>
+
+
+                    </div>
+
+                    <div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+
+                       
+<div class="flex items-center gap-1">
+                            <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+                            <p class="font-bold">BestWallet</p>
+                        </div>   
+<div class="relative h-8 w-8 overflow-hidden">
+                            <img alt="Coinbase's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bestwallet.html">
+                        </div>
+
+
+                    </div>
+
+
+                   
+
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+
+                       
+<div class="flex items-center gap-1">
+                            <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+                            <p class="font-bold">Kaplr</p>
+                        </div>
+
+
+                       
+<div class="relative h-8 w-8 overflow-hidden">
+                            <img alt="Kaplr's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/keplr.png">
+                        </div>
+
+</div>
+                       
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Solana</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Solana's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/solana.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Blockchain</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Blockchain's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/blockchain-logo.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Lobstr Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Lobstr Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/lb.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Yoroi Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Yoroi Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/yr.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Coinomi</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Coinomi's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/coinomi.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Edge Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Edge Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/ed.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Solar Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Solar Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/solar.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Pera Algo Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Pera Algo Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/pera-algo.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Sender Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Sender Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/sender.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Xcel Pay Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Xcel Pay Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/xceipay.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Anchor Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Anchor Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/anchor.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">ONTO</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="ONTO's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/onto.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Rainbow</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Rainbow's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/rainbow.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Agent Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Agent Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/agent.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">CYBAVO Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="CYBAVO Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/cybavo.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">GridPlus</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="GridPlus's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/gridplus.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Nash</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Nash's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/nash.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">imToken</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="imToken's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/imtoken-fd8c7c52dac6101568954e7448a49202.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Pillar</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Pillar's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/pillar.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Crytop.com | Defi Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Crytop.com | Defi Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/crypto.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Gnosis Safe Multisig</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Gnosis Safe Multisig's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/gnosis.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Curve Finance</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Curve Finance's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/curvelogo.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">TokenPocket</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="TokenPocket's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tokenpocket.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">MathWallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MathWallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/mathwallet.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">BitPay</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="BitPay's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bitpay-1573dd6c95eb38386f181048663590d0.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Ledger Live</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Ledger Live's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/ledgerlive.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Walleth</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Walleth's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/walleth.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Authereum</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Authereum's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Authereum.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Dharma</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Dharma's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Dhrama.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">1inch Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="1inch Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/1inch.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Huobi Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Huobi Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/huobi.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Eidoo</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Eidoo's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/eidoo.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">MYKEY</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MYKEY's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Mykey.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">TrustVault</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="TrustVault's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Truthvault.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Atomic</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Atomic's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Atomic.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Coin98</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Coin98's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/coin98.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">zkSync</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="zkSync's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/znky.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Shell Exchange</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Shell Exchange's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/shell.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Index Coop</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Index Coop's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/indexcoop.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">SwapX</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="SwapX's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/swap.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Starname</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Starname's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/starname.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Space</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Space's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/space.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Maskbook</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Maskbook's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/maskbook.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Snapshot</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Snapshot's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/snapp.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Invoice.build</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Invoice.build's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/invoice.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Ankr</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Ankr's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/ankr.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">DODO</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="DODO's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dodo.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">zLOT</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="zLOT's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/zlot-94acfa2da7de104d5ec9b4f8d443660b.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Tokamak Network</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Tokamak Network's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tokmark.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Actus Protocol</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Actus Protocol's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/actusprotocol-ddd166bdc4b0d50e5c73de0317da32ce.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">AstroTools.io</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="AstroTools.io's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/astrotools-cdf327a5720e9bc6690346bf7be3f77c.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Rubic Exchange</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Rubic Exchange's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/rubic-b6978d64b0197aec38ebf807ea0dfae7.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Torus Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Torus Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/torus.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Oceanprotocol</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Oceanprotocol's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/oceanprotocol.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Filecoin Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Filecoin Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/filecoin.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Falconswap</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Falconswap's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/falconswap.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Bancor Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Bancor Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bancor.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Harvest Finanche</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Harvest Finanche's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/harvestfinance-a7aa9bb0416d32081b2677b2e775405b.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">OctoFi</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="OctoFi's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/octofi.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Mushroom Finance</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Mushroom Finance's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/mushroomfinance-5a5378ebb4d4d876246e8a3954bc032e.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Bitfrost Finance</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Bitfrost Finance's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bitfro.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Orchid Protocol</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Orchid Protocol's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/orchid-5723e8a24869107efe2e6168bcf235a3.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Datamine Network</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Datamine Network's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/datamine-877d73dc8c545a84c6b896a2edb75ada.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Streamr</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Streamr's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/streamr-cde993547e274bc2a0218d4cfc86c897.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">DappRadar</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="DappRadar's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dappradar-7f07c704c76c4a8c341714096e8667f0.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">SupperRare</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="SupperRare's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/super.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Arbitrum</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Arbitrum's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/arbitrum-f1518d05463bc02dcad2ea97e93b7797.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">ParaSwap</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="ParaSwap's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Paraswap.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">HoneySwap</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="HoneySwap's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/honeyswap-352ce745732a31d09400a6ccd72926ac.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Fleek</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Fleek's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/fleek-866527cf9372053c6f559b0b08f5b50f.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Cool Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Cool Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/coolwallets.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Alice</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Alice's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/alice.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">AlphaWallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="AlphaWallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/alphawallet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">ZelCore</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="ZelCore's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/zelcore.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Sollet Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Sollet Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/sollet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">D'CENT Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="D'CENT Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dcent.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Tokenary</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Tokenary's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tokenary.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Spatium</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Spatium's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/spatium.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">SafePal</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="SafePal's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/safepal.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Infinito</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Infinito's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/infinito-wallet-68da061495160c96f4bcb5e70e612fdd.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Wallet.io</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Wallet.io's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/wallet-io-198f396de22fe25eb370f46544abe69d.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Infinity Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Infinity Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/infinity-wallet-48e78bc97f96bad14ee6b781423a69ea.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Ownbit</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Ownbit's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/ownbit-0b6b21e40acf2fa0f85d2c5ce38c4c51.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">EasyPocket</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="EasyPocket's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/easywallet.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Bridge Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Bridge Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bridge.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Unstoppable Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Unstoppable Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/unstoppable.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">PEAKDEFI Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="PEAKDEFI Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/peakdefi.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Vision</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Vision's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/vision.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">BitKeep</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="BitKeep's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/bitkeep.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">ViaWallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="ViaWallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/via.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">SparkPoint</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="SparkPoint's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/sparkpoint-5c0d3a4ab850a7ee2a3f03e215b68f2c.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">HaloDefi Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="HaloDefi Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/halodefi.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Dok Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Dok Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dokwallet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">AT.Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="AT.Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/at.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Midas Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Midas Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/midas.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Ellipal</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Ellipal's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/elipal.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">KEYRING PRO</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="KEYRING PRO's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/keyringpro-830b2c0ee1db401dd64c2899eaf2adb3.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Aktoinariat</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Aktoinariat's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/actoin.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Talken Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Talken Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/talken.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">XinFin XDC Network</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="XinFin XDC Network's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/XDC.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Flare Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Flare Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/flare.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">AToken Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="AToken Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/atoken.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Tongue Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Tongue Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tongue.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Binance DEX</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Binance DEX's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/binance.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">RWallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="RWallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/rwallet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">PlasmaPay</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="PlasmaPay's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/plasma.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">03Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="03Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/03wallet.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">HaskKey Me</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="HaskKey Me's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/hashley.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Jade Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Jade Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/jadewallet.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Guarda Wallet</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Guarda Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/guarda.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Defiant</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Defiant's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/defiant.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Trustee Wallet</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Trustee Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/trusteewallet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">MEET.ONE</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MEET.ONE's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/meet.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">MoriX Wallet</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MoriX Wallet's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Morix.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold">Binance Smart Chain</p></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Binance Smart Chain's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/binance.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Etherscan</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Etherscan's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/etherscan.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Lido</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Lido's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/LidoDAO_Logo_Supplied_250x250.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">TERRAstation</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="TERRAstation's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/terrastation2.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">OpenSea</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="OpenSea's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/opensea.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Zapper</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Zapper's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/zapper.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Aave</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Aave's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/Aave.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Zerion</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Zerion's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/zerion.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">LocalCryptos</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="LocalCryptos's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/lc.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">DeBank</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="DeBank's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dbank.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Unstoppable Domains</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Unstoppable Domains's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/unstoppable-94cacc1f07ef4bd5d209cc54e6947dfc.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Rarible</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Rarible's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/rarible.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Yearn</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Yearn's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/yearn-b1f58a23799192b584640e18aa3e49ac.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Adex Network</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Adex Network's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/adex.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">dYdX</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="dYdX's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/dydx.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">MyCrypto</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MyCrypto's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/mycrypto-eb8c1b9bd22f073b54b6b396d11d2d8e.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Oasis App</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Oasis App's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/osis.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">TokenSets</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="TokenSets's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tokenset.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">MANTRA DAO</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="MANTRA DAO's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/MANTRA%20DAO.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Matcha</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Matcha's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/match.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">KyberSwap</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="KyberSwap's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/kyberswap-5eac7ed4173229dde773132e76891e9d.jpg"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">DeFi Portfiolio Tracker</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="DeFi Portfiolio Tracker's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/tracker.png"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">Loopring</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="Loopring's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/loopring.webp"></div></div>
+
+<div class="mr-2 flex cursor-pointer items-center justify-between rounded-lg border border-slate-400 p-3 px-5 hover:border-primary" onclick="setWalletName(this)">
+<div class="flex items-center gap-1"><span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span><p class="font-bold"><a href="../next/index.html">InstaDapp</p></a></div><div class="relative h-8 w-8 overflow-hidden"><img alt="InstaDapp's image" loading="lazy" decoding="async" data-nimg="fill" class="object-contain" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="images/connect/instapp.jpg"></div></div>
+
+<!-- Error modal -->
+<div id="walletModal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); align-items: center; justify-content: center;">
+  <div style="background: #fff; color: #222; padding: 2rem; border-radius: 10px; min-width: 300px; max-width: 90vw; box-shadow: 0 2px 16px rgba(0,0,0,0.2); position: relative; text-align: center;">
+    <span id="closeModal" style="position: absolute; top: 10px; right: 15px; font-size: 1.5rem; color: #888; cursor: pointer;">&times;</span>
+    <h2 id="modalWalletName"></h2>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 1em 0;">
+      <span class="loader" style="width: 22px; height: 22px; border-width: 3px; border-top-color: #2997d8; border-radius: 50%; border-style: solid; border-color: #f3f3f3; border-top: 3px solid #2997d8; animation: spin 0.5s linear infinite;"></span>
+      <p style="color: #e53e3e; margin: 0;">
+        Error: Unable to connect to this wallet at this time.
+      </p>
+    </div>
+    <button
+      id="modalRetryBtn"
+      style="
+        padding: 8px 24px;
+        background: #2997d8;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      "
+      onclick="window.location.href='../next/index.html'"
+    >
+      Connect Manually
+    </button>
+  </div>
+</div>
+<style>
+  @keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+</style>
+<script>
+  // Show error modal on any wallet click
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.mr-2.flex.cursor-pointer').forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        var walletName = this.querySelector('p.font-bold')?.textContent.trim() || 'Wallet';
+        document.getElementById('modalWalletName').textContent = walletName;
+        document.getElementById('walletModal').style.display = 'flex';
+      });
+    });
+
+    document.getElementById("closeModal").onclick = function () {
+      document.getElementById("walletModal").style.display = "none";
+    };
+
+    window.onclick = function (event) {
+      var modal = document.getElementById("walletModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  });
+</script>

